@@ -7,13 +7,15 @@ import Results from './pages/Results';
 import Freelances from './pages/Freelances';
 import Header from './components/Header';
 import Error from './components/Error';
-import { ThemeProvider } from './utils/context';
 import Footer from './components/Footer';
+import { ThemeProvider } from './utils/context';
+import GlobalStyle from './utils/style/GlobalStyle';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <ThemeProvider>
+        <GlobalStyle />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
